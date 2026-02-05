@@ -60,16 +60,22 @@ const Footer = () => {
         <div className="flex flex-col lg:items-center lg:justify-center">
           <div className="flex flex-col text-sm space-y-2.5">
             <h2 className="font-semibold mb-5 text-gray-800">Company</h2>
-            <Link className="hover:text-slate-600 transition" href="#">
-              About us
+            <Link className="hover:text-slate-600 transition" href="/">
+              Home
             </Link>
-            <Link className="hover:text-slate-600 transition" href="#">
+            <Link className="hover:text-slate-600 transition" href="/about">
+              About Us
+            </Link>
+            <Link className="hover:text-slate-600 transition" href="services">
               Our Services
             </Link>
-            <Link className="hover:text-slate-600 transition" href="#">
-              Contact us
+            <Link className="hover:text-slate-600 transition" href="services">
+              Gallery
             </Link>
-            <Link className="hover:text-slate-600 transition" href="#">
+            <Link className="hover:text-slate-600 transition" href="/contact">
+              Contact Us
+            </Link>
+            <Link className="hover:text-slate-600 transition" href="/faq">
               Frequently Asked Questions
             </Link>
           </div>
