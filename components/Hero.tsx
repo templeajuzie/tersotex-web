@@ -116,7 +116,7 @@ const Hero = () => {
       </div>
       <img
         src="https://i.pinimg.com/736x/3e/7d/d5/3e7dd5d5c1b97db6fe0b8efa430507f3.jpg"
-        className="max-w-2xl sm:max-w-md h-[50vh] rounded-3xl lg:max-w-lg 2xl:max-w-xl transition-all duration-300 object-cover"
+        className="w-full px-2 md:max-w-2xl sm:max-w-md h-[50vh] rounded-3xl lg:max-w-lg 2xl:max-w-xl transition-all duration-300 object-cover"
       />
     </main>
   );
