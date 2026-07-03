@@ -1,146 +1,47 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import React from "react";
+
+const whatsappUrl = "https://wa.me/2348145210122?text=Hello%20Terso%2C%20I%20would%20like%20to%20make%20an%20enquiry.";
 
 const Contact = () => {
   return (
     <div>
       <Header />
-
-      <>
-        <style>
-          {`
-                    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-                    * {
-                        font-family: "Poppins", sans-serif;
-                    }
-                `}
-        </style>
-
-        <section className="flex items-center justify-center py-12 px-4">
-          <div className="grid md:grid-cols-2 md:gap-10 lg:gap-20 max-w-7xl w-full items-center">
-            <div className="p-5">
-              <h1 className="text-3xl font-semibold text-gray-900 text-center md:text-start mb-3 tracking-tight">
-                Get in touch
-              </h1>
-              <p className="text-sm/6 text-gray-600 text-center md:text-start mx-auto md:mx-0 mb-8 leading-relaxed max-w-[400px]">
-                Have a question or idea? Our approachable team would love to
-                connect and support you.
-              </p>
-
-              <form>
-                <div className="grid grid-cols-2 gap-4 mb-5">
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">
-                      First name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="David"
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none focus:border-indigo-500 transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm text-gray-500 mb-2">
-                      Last name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Andrew"
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none focus:border-indigo-500 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-5">
-                  <label className="block text-sm text-gray-500 mb-2">
-                    Email id
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="david@company.com"
-                    className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none focus:border-indigo-500 transition-colors"
-                  />
-                </div>
-
-                <div className="mb-5">
-                  <label className="block text-sm text-gray-500 mb-2">
-                    Phone number
-                  </label>
-                  <div className="flex border border-gray-300 rounded-lg overflow-hidden focus-within:border-indigo-500 transition-colors">
-                    <select className="px-3 py-3 text-sm outline-none cursor-pointer text-gray-500 bg-white border-r border-gray-300">
-                      <option>US</option>
-                      <option>UK</option>
-                      <option>IN</option>
-                      <option>CA</option>
-                    </select>
-                    <input
-                      type="tel"
-                      placeholder="+1 342 123-456"
-                      className="flex-1 px-3 py-3 text-sm outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-5">
-                  <label className="block text-sm text-gray-500 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none resize-y focus:border-indigo-500 transition-colors"
-                  />
-                </div>
-
-                <div className="flex items-center gap-2 mb-6">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 cursor-pointer accent-indigo-500 rounded-[5px] text-gray-300"
-                  />
-                  <label className="text-sm text-gray-500 cursor-pointer">
-                    You agree to our <span className="underline">terms</span>{" "}
-                    and <span className="underline">privacy policy</span>.
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3.5 bg-linear-to-br from-indigo-500 to-purple-600 text-white rounded-lg text-sm cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(99,102,241,0.3)]"
-                >
-                  Send message
-                </button>
-              </form>
+      <main className="px-4 py-16 md:px-8">
+        <section className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2636a7]">Contact</p>
+            <h1 className="mt-3 text-4xl font-semibold text-slate-950">Get in touch with Terso</h1>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
+              Send enquiries and product requests through WhatsApp. We are available from 8:00 am to 5:00 pm.
+            </p>
+            <div className="mt-8 space-y-4 text-sm text-slate-700">
+              <p><strong>Phone:</strong> 08145210122, 08109529429</p>
+              <p><strong>Email:</strong> tersotex1930@gmail.com</p>
+              <p><strong>Address:</strong> No 7 Erabor Close by Ilom Street, Port Harcourt</p>
+              <p><strong>Hours:</strong> 8:00 am - 5:00 pm</p>
             </div>
-
-            <div className="rounded-3xl p-10 relative min-h-[662px] w-full max-w-[520px] hidden md:flex flex-col justify-between overflow-hidden">
-              <img
-                src={
-                  "https://i.pinimg.com/736x/ed/1c/5a/ed1c5a086f9d3db8a21c35582ad98601.jpg"
-                }
-                alt="3D shapes"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-
-              <div className="relative z-10 mt-auto">
-                <p className="text-sm/6 text-white mb-5 max-w-[400px]">
-                  Stop spending hours recreating layouts - with{" "}
-                  <strong>PrebuiltUI</strong> you can copy, customize and launch
-                  stunning UIs in minutes.
-                </p>
-                <p className="text-sm text-white mb-4 text-right">
-                  ━ Emily Rodriguez
-                </p>
-
-                <div className="flex justify-end gap-2 items-center">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-white"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-gray-400"></div>
-                </div>
-              </div>
-            </div>
+            <a href={whatsappUrl} className="mt-8 inline-flex rounded-full bg-[#2636a7] px-7 py-3 text-sm font-medium text-white hover:bg-[#1f2c86]">
+              Message on WhatsApp
+            </a>
           </div>
+
+          <form className="rounded-lg border border-slate-200 bg-slate-50 p-6" action={whatsappUrl}>
+            <label className="block text-sm font-medium text-slate-700" htmlFor="name">Name</label>
+            <input id="name" name="name" className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 text-sm outline-none focus:border-[#2636a7]" placeholder="Your name" />
+
+            <label className="mt-5 block text-sm font-medium text-slate-700" htmlFor="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 text-sm outline-none focus:border-[#2636a7]" placeholder="Your phone number" />
+
+            <label className="mt-5 block text-sm font-medium text-slate-700" htmlFor="message">Message</label>
+            <textarea id="message" name="message" rows={5} className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 text-sm outline-none focus:border-[#2636a7]" placeholder="What do you need?" />
+
+            <button type="submit" className="mt-6 w-full rounded-full bg-[#2636a7] px-6 py-3 text-sm font-medium text-white hover:bg-[#1f2c86]">
+              Continue to WhatsApp
+            </button>
+          </form>
         </section>
-      </>
+      </main>
       <Footer />
     </div>
   );

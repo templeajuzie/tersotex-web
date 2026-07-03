@@ -1,96 +1,47 @@
-"use client"
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import React from 'react'
+"use client";
+
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import React from "react";
+
+const faqsData = [
+  ["What does Terso do?", "Terso creates affordable hygiene products for Nigerian homes and businesses."],
+  ["Is pricing public?", "No. Pricing is not public for now. Contact Terso directly for current product availability and quotes."],
+  ["How do I contact Terso?", "Send a WhatsApp message to 08145210122 or call 08109529429."],
+  ["Where is Terso located?", "No 7 Erabor Close by Ilom Street, Port Harcourt."],
+  ["What are the business hours?", "Terso is open from 8:00 am to 5:00 pm."],
+];
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
-  const faqsData = [
-    {
-      question: "Lightning-Fast Performance",
-      answer: "Built with speed — minimal load times and optimized rendering.",
-    },
-    {
-      question: "Fully Customizable Components",
-      answer:
-        "Easily adjust styles, structure, and behavior to match your project needs.",
-    },
-    {
-      question: "Responsive by Default",
-      answer:
-        "Every component are responsive by default — no extra CSS required.",
-    },
-    {
-      question: "Tailwind CSS Powered",
-      answer:
-        "Built using Tailwind utility classes — no extra CSS or frameworks required.",
-    },
-    {
-      question: "Dark Mode Support",
-      answer:
-        "All components come ready with light and dark theme support out of the box.",
-    },
-  ];
-  return (
-    <div className="">
-      <Header />
-      <div className='my-20'>
-        <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  const [openIndex, setOpenIndex] = React.useState<number | null>(0);
 
-                * {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
-        <div className="flex flex-col items-center text-center text-slate-800 px-3">
-          <p className="text-base font-medium text-slate-600">FAQ</p>
-          <h1 className="text-3xl md:text-4xl font-semibold mt-2">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-sm text-slate-500 mt-4 max-w-sm">
-            Proactively answering FAQs boosts user confidence and cuts down on
-            support tickets.
-          </p>
-          <div className="max-w-xl w-full mt-6 flex flex-col gap-4 items-start text-left">
-            {faqsData.map((faq, index) => (
-              <div key={index} className="flex flex-col items-start w-full">
-                <div
-                  className="flex items-center justify-between w-full cursor-pointer bg-slate-50 border border-slate-200 p-4 rounded"
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
+  return (
+    <div>
+      <Header />
+      <main className="px-4 py-16 md:px-8">
+        <section className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2636a7]">FAQ</p>
+          <h1 className="mt-3 text-4xl font-semibold text-slate-950">Frequently Asked Questions</h1>
+          <div className="mt-8 flex flex-col gap-4 text-left">
+            {faqsData.map(([question, answer], index) => (
+              <div key={question} className="rounded-md border border-slate-200">
+                <button
+                  className="flex w-full items-center justify-between p-4 text-left text-sm font-medium text-slate-900"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  type="button"
                 >
-                  <h2 className="text-sm">{faq.question}</h2>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`${openIndex === index ? "rotate-180" : ""} transition-all duration-500 ease-in-out`}
-                  >
-                    <path
-                      d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
-                      stroke="#1D293D"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <p
-                  className={`text-sm text-slate-500 px-4 transition-all duration-500 ease-in-out ${openIndex === index ? "opacity-100 max-h-[300px] translate-y-0 pt-4" : "opacity-0 max-h-0 -translate-y-2"}`}
-                >
-                  {faq.answer}
-                </p>
+                  {question}
+                  <span>{openIndex === index ? "-" : "+"}</span>
+                </button>
+                {openIndex === index && <p className="px-4 pb-4 text-sm leading-6 text-slate-600">{answer}</p>}
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
       <Footer />
     </div>
   );
-}
+};
 
-export default FAQ
+export default FAQ;

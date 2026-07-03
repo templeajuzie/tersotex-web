@@ -1,37 +1,25 @@
+import Link from "next/link";
+
 export default function LearnMore() {
   return (
-    <>
-      <style>{`
-                @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-            
-                * {
-                    font-family: "Poppins", sans-serif;
-                }
-            `}</style>
-      <div className="px-4 py-20">
-        <div className="w-full max-w-5xl bg-linear-to-b from-violet-100 to-[#FFE8E9] rounded-3xl px-6 pt-20 md:p-18 mx-auto flex flex-col md:flex-row justify-between items-center md:items-center relative overflow-hidden h-fit">
-          <div className="flex-1 px-2 md:pl-5 mb-8 md:mb-0 md:mt-4 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl/12 font-medium text-gray-900 text-balance">
-              Meet the team Shaping the future.
-            </h1>
-            <p className="text-sm/6 text-gray-700 max-w-full md:max-w-sm mt-3 mx-auto md:mx-0">
-              Our diverse team of engineers and designers are dedicated to
-              building AI agents that simplify work and empower businesses.
-            </p>
-            <button className="bg-white hover:bg-gray-50 px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm text-gray-700 mt-6 md:mt-8 cursor-pointer">
-              Join our team
-            </button>
-          </div>
-
-          <div className="shrink-0 md:-mr-18 -mb-6 md:-mb-23 md:mt-4 w-full md:w-auto">
-            {/* <img
-              className="w-full md:w-[490px] h-auto rounded-tr-3xl md:rounded-tr-none rounded-br-none md:rounded-br-3xl rounded-bl-none"
-              src="https://i.pinimg.com/736x/af/85/f4/af85f4dda2777b40253c02d87fee9e80.jpg"
-              alt="meeting image"
-            /> */}
-          </div>
+    <section className="px-4 py-14 md:px-8">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 rounded-lg bg-[#eaf7fb] p-6 md:grid-cols-2 md:p-10">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2636a7]">Founded November 2023</p>
+          <h2 className="mt-3 text-3xl font-semibold text-slate-950">A Nigerian hygiene passion project by Uche Amazu</h2>
+          <p className="mt-4 text-sm leading-7 text-slate-700">
+            Terso was founded solely by Uche Amazu after noticing hygiene issues that needed a practical solution to reduce dirtiness. She created an affordable formula customers can use effectively as the Nigerian hygiene ecosystem continues to improve.
+          </p>
+          <Link href="/about" className="mt-6 inline-flex rounded-full bg-[#2636a7] px-6 py-3 text-sm font-medium text-white">
+            Learn more
+          </Link>
         </div>
+        <img
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1000&auto=format&fit=crop"
+          alt="Clean work surface"
+          className="h-80 w-full rounded-md object-cover"
+        />
       </div>
-    </>
+    </section>
   );
 }
