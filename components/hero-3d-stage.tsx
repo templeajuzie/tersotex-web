@@ -10,7 +10,7 @@ import { AISection } from "./ai-section";
 import { ProductDirectionSection } from "./product-direction-section";
 import { WorkflowsSection } from "./workflows-section";
 import { CTASection } from "./cta-section";
-import { Footer } from "./footer";
+import { Footer } from "./landing-page/footer";
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0);
