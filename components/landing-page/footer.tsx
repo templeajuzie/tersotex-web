@@ -27,10 +27,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-background flex items-center justify-center">
-                <img src="/images/terso-logo.png" alt="Terso logo" className="h-6 w-6 object-contain" />
-              </div>
-              <span className="font-serif text-xl font-medium text-background">Terso</span>
+              <img src="/images/terso-logo.png" alt="Terso logo" className="h-30 w-auto object-cover" />
             </Link>
             <p className="text-background/70 leading-relaxed mb-6 max-w-sm">
               Ensuring process in every step through affordable hygiene products and safe production practice.

@@ -9,7 +9,7 @@ interface ScrollBlurTextProps {
   endBlur?: number
 }
 
-export function ScrollBlurText({ text, className = "", startBlur = 80, endBlur = 0 }: ScrollBlurTextProps) {
+export function ScrollBlurText({ text, className = "", startBlur = 90, endBlur = 0 }: ScrollBlurTextProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [wordProgress, setWordProgress] = useState<number[]>([])
 
