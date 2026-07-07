@@ -3,14 +3,14 @@ import { Mail, MapPin, Phone } from "lucide-react"
 
 const footerLinks = {
   services: [
-    { label: "Hygiene products", href: "#services" },
-    { label: "Safe production", href: "#standards" },
-    { label: "Quality formulation", href: "#services" },
+    { label: "Hygiene products", href: "/#services" },
+    { label: "Safe production", href: "/#standards" },
+    { label: "Quality formulation", href: "/#services" },
   ],
   company: [
-    { label: "Our story", href: "#about" },
-    { label: "Mission", href: "#about" },
-    { label: "Standards", href: "#standards" },
+    { label: "Our story", href: "/#about" },
+    { label: "Mission", href: "/#about" },
+    { label: "Standards", href: "/#standards" },
   ],
   contact: [
     { label: "WhatsApp", href: "https://wa.me/2348145210122" },

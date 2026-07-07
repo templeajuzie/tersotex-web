@@ -4,27 +4,7 @@ import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { ScrollBlurText } from "@/components/scroll-blur-text"
-
-const products = [
-  {
-    name: "Terso Dish Washing (25Ltr)",
-    description: "Effective on grease and grime, dissolves dirt quickly while remaining mild and gentle on hands. Safe for use on all kitchen surfaces, safe on hands.",
-    image: "/images/product-equilibrium.png",
-    tag: "Products",
-  },
-  {
-    name: "Terso Dish Washing (41C)",
-    description: "Cost effective quality detergent. Gentle on the hand, tough on dirt and grease.",
-    image: "/images/product-serenity1.png",
-    tag: "Process",
-  },
-  {
-    name: "Terso Dish Washing (25Ltr)",
-    description: "Effective on grease and grime, dissolves dirt quickly while remaining mild and gentle on hands. Safe for use on all kitchen surfaces, safe on hands.",
-    image: "/images/product-equilibrium.png",
-    tag: "Products",
-  },
-]
+import { products } from "@/lib/products"
 
 export function ProductSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -67,7 +47,7 @@ export function ProductSection() {
         <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible -mx-6 px-6 lg:mx-0">
           {products.map((product, index) => (
             <div
-              key={product.name}
+              key={`${product.slug}-${index}`}
               className={`reveal opacity-0 ${index === 1 ? "animation-delay-200" : index === 2 ? "animation-delay-400" : ""} group min-w-[85vw] md:min-w-[70vw] lg:min-w-0 snap-center`}
             >
               <div className="bg-card rounded-3xl overflow-hidden border border-border/50 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
@@ -92,8 +72,8 @@ export function ProductSection() {
                     variant="ghost"
                     className="text-primary hover:text-primary hover:bg-primary/10 p-0 h-auto group/btn"
                   >
-                    <a href="https://wa.me/2348145210122">
-                      Ask on WhatsApp
+                    <a href={`/products/${product.slug}`}>
+                      Read product description
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   </Button>
