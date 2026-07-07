@@ -59,7 +59,7 @@ export function MissionSection() {
                   needed a practical solution to reduce dirtiness in Nigeria.
                 </p>
                 <p>
-                  Her mission is ensuring maximum perfection in every step. Terso's vision is to build trust, ensure
+                  Her mission is ensuring maximum perfection in every step. Terso&apos;s vision is to build trust, ensure
                   safe practice in every production, and maintain industrial standard procedures.
                 </p>
               </div>

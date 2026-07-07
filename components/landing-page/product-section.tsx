@@ -7,22 +7,22 @@ import { ScrollBlurText } from "@/components/scroll-blur-text"
 
 const products = [
   {
-    name: "Hygiene Products",
-    description: "Cost-effective hygiene products made to reduce dirtiness and support cleaner everyday spaces.",
+    name: "Terso Dish Washing (25Ltr)",
+    description: "Effective on grease and grime, dissolves dirt quickly while remaining mild and gentle on hands. Safe for use on all kitchen surfaces, safe on hands.",
     image: "/images/product-equilibrium.png",
     tag: "Products",
   },
   {
-    name: "Safe Production",
-    description: "Process-led production focused on safe practice, consistency, and industrial standard procedures.",
-    image: "/images/product-serenity.png",
+    name: "Terso Dish Washing (41C)",
+    description: "Cost effective quality detergent. Gentle on the hand, tough on dirt and grease.",
+    image: "/images/product-serenity1.png",
     tag: "Process",
   },
   {
-    name: "Quality Formulation",
-    description: "Affordable formulas designed for customers to use effectively without compromising quality.",
-    image: "/images/product-vitality.png",
-    tag: "Formula",
+    name: "Terso Dish Washing (25Ltr)",
+    description: "Effective on grease and grime, dissolves dirt quickly while remaining mild and gentle on hands. Safe for use on all kitchen surfaces, safe on hands.",
+    image: "/images/product-equilibrium.png",
+    tag: "Products",
   },
 ]
 
