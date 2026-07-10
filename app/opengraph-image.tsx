@@ -51,7 +51,7 @@ export default function Image() {
             Affordable hygiene products with safe production practice and industrial standard procedures.
           </div>
         </div>
-        <div style={{ fontSize: 24, opacity: 0.8 }}>
+        <div style={{ display: "flex", fontSize: 24, opacity: 0.8 }}>
           Port Harcourt, Nigeria • {contact.phone} • {contact.email}
         </div>
       </div>
