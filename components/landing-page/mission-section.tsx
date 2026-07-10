@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { companyName } from "@/lib/contact"
 
 export function MissionSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -48,18 +49,18 @@ export function MissionSection() {
             {/* Content */}
             <div className="order-1 lg:order-2">
               <p className="reveal opacity-0 text-sm uppercase tracking-[0.2em] text-accent font-medium mb-4">
-                About Terso
+                About {companyName}
               </p>
               <h2 className="reveal opacity-0 animation-delay-200 font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-background text-balance mb-8">
                 Built to improve everyday hygiene
               </h2>
               <div className="reveal opacity-0 animation-delay-400 space-y-6 text-background/90 leading-relaxed">
                 <p>
-                  Terso was founded solely by Uche Amazu in November 2023 after she identified hygiene issues that
+                  {companyName} was founded solely by Uche Amazu in November 2023 after she identified hygiene issues that
                   needed a practical solution to reduce dirtiness in Nigeria.
                 </p>
                 <p>
-                  Her mission is ensuring maximum perfection in every step. Terso&apos;s vision is to build trust, ensure
+                  Her mission is ensuring maximum perfection in every step. {companyName}&apos;s vision is to build trust, ensure
                   safe practice in every production, and maintain industrial standard procedures.
                 </p>
               </div>
@@ -70,7 +71,7 @@ export function MissionSection() {
                   className="bg-background text-foreground hover:bg-background/90 rounded-full px-8 group"
                 >
                   <a href="#contact">
-                    Contact Terso
+                    Contact {companyName}
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>

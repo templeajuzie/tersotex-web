@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { companyName, contact } from "@/lib/contact"
 
 const footerLinks = {
   services: [
@@ -13,9 +14,10 @@ const footerLinks = {
     { label: "Standards", href: "/#standards" },
   ],
   contact: [
-    { label: "WhatsApp", href: "https://wa.me/2348145210122" },
-    { label: "Call", href: "tel:08145210122" },
-    { label: "Email", href: "mailto:tersotex1930@gmail.com" },
+    { label: "WhatsApp", href: contact.whatsappUrl },
+    { label: "Call", href: contact.phoneHref },
+    { label: "Email", href: `mailto:${contact.email}` },
+    ...contact.socials,
   ],
 }
 
@@ -35,11 +37,11 @@ export function Footer() {
             <div className="space-y-3 text-sm text-background/70">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <span>tersotex1930@gmail.com</span>
+                <span>{contact.email}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4" />
-                <span>08145210122, 08109529429</span>
+                <span>{contact.phone}</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
@@ -91,7 +93,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-background/50">© 2026 Terso. All rights reserved.</p>
+          <p className="text-sm text-background/50">© 2026 {companyName}. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-background/50">
             <Link href="#" className="hover:text-background transition-colors">
               Legal notice

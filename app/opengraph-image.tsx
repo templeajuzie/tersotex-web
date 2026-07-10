@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
+import { companyName, contact } from "@/lib/contact";
 
-export const alt = "Terso - Ensuring process in every step";
+export const alt = `${companyName} - Ensuring process in every step`;
 export const size = {
   width: 1200,
   height: 630,
@@ -40,7 +41,7 @@ export default function Image() {
           >
             T
           </div>
-          <div style={{ fontSize: 52, fontWeight: 800 }}>Terso</div>
+          <div style={{ fontSize: 52, fontWeight: 800 }}>{companyName}</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 78, fontWeight: 800, lineHeight: 1.05, maxWidth: 920 }}>
@@ -51,7 +52,7 @@ export default function Image() {
           </div>
         </div>
         <div style={{ fontSize: 24, opacity: 0.8 }}>
-          Port Harcourt, Nigeria • 08145210122 • tersotex1930@gmail.com
+          Port Harcourt, Nigeria • {contact.phone} • {contact.email}
         </div>
       </div>
     ),

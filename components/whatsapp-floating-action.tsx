@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { contact } from "@/lib/contact";
 
 const WhatsApp = (props: SVGProps<SVGSVGElement>) => (
   <svg {...props} fill="none" viewBox="0 0 360 362" aria-hidden="true">
@@ -14,7 +15,7 @@ const WhatsApp = (props: SVGProps<SVGSVGElement>) => (
 export function WhatsAppFloatingAction() {
   return (
     <a
-      href={process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/2348145210122"}
+      href={process.env.NEXT_PUBLIC_WHATSAPP_URL ?? contact.whatsappUrl}
       aria-label="Chat on WhatsApp"
       target="_blank"
       rel="noreferrer"

@@ -2,25 +2,26 @@
 
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import { ScrollBlurText } from "./scroll-blur-text"
+import { companyName, contact } from "@/lib/contact"
 
 const contactItems = [
   {
     icon: Phone,
     label: "Phone",
-    value: "08145210122, 08109529429",
-    href: "tel:08145210122",
+    value: contact.phone,
+    href: contact.phoneHref,
   },
   {
     icon: Mail,
     label: "Email",
-    value: "tersotex1930@gmail.com",
-    href: "mailto:tersotex1930@gmail.com",
+    value: contact.email,
+    href: `mailto:${contact.email}`,
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "Send messages to 08145210122",
-    href: "https://wa.me/2348145210122",
+    value: `Send messages to ${contact.phone}`,
+    href: contact.whatsappUrl,
   },
   {
     icon: Clock,
@@ -43,11 +44,11 @@ export function TestimonialsSection() {
             Contact
           </p>
           <ScrollBlurText
-            text="Talk to Terso"
+            text={`Talk to ${companyName}`}
             className="font-serif text-3xl md:text-4xl text-foreground text-balance lg:text-7xl font-light"
           />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-6">
-            For product enquiries, service details, or messages from the site, reach Terso on WhatsApp or by phone.
+            For product enquiries, service details, or messages from the site, reach {companyName} on WhatsApp or by phone.
           </p>
         </div>
 

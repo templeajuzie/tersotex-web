@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { AnimatedText } from "@/components/animated-text"
+import { companyName, contact } from "@/lib/contact"
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -80,7 +81,7 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
             className="text-sm uppercase tracking-[0.2em] text-background font-medium mb-6"
           >
-            Terso
+            {companyName}
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +109,7 @@ export function HeroSection() {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base group"
             >
-              <a href="https://wa.me/2348145210122">
+              <a href={contact.whatsappUrl}>
                 Chat on WhatsApp
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>

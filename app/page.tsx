@@ -17,6 +17,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { contact } from "@/lib/contact";
 
 export default function Home() {
   const navItems = [
@@ -36,8 +37,8 @@ export default function Home() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton href="tel:08145210122" variant="secondary" className="text-white hover:text-white/90">Call</NavbarButton>
-            <NavbarButton href="https://wa.me/2348145210122" variant="primary">WhatsApp</NavbarButton>
+            <NavbarButton href={contact.phoneHref} variant="secondary" className="text-white hover:text-white/90">Call</NavbarButton>
+            <NavbarButton href={contact.whatsappUrl} variant="primary">WhatsApp</NavbarButton>
           </div>
         </NavBody>
 
@@ -67,7 +68,7 @@ export default function Home() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
-                href="tel:08145210122"
+                href={contact.phoneHref}
                 onClick={() => setIsMobileMenuOpen(false)}
                 // variant="primary"
                 className="w-full text-white"
@@ -75,7 +76,7 @@ export default function Home() {
                 Call
               </NavbarButton>
               <NavbarButton
-                href="https://wa.me/2348145210122"
+                href={contact.whatsappUrl}
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"

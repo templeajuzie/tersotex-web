@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { WhatsAppFloatingAction } from "@/components/whatsapp-floating-action";
+import { companyName } from "@/lib/contact";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terso.ng";
@@ -7,11 +8,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terso.ng";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Terso | Ensuring Process in Every Step",
-    template: "%s | Terso",
+    default: `${companyName} | Ensuring Process in Every Step`,
+    template: `%s | ${companyName}`,
   },
   description:
-    "Terso creates affordable hygiene products in Port Harcourt with safe production practices and industrial standard procedures.",
+    `${companyName} creates affordable hygiene products in Port Harcourt with safe production practices and industrial standard procedures.`,
   keywords: [
     "Terso",
     "Terso hygiene",
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
     "industrial standard procedures",
     "Uche Amazu",
   ],
-  authors: [{ name: "Terso" }],
-  creator: "Terso",
-  publisher: "Terso",
+  authors: [{ name: companyName }],
+  creator: companyName,
+  publisher: companyName,
   alternates: {
     canonical: "/",
   },
@@ -31,8 +32,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "/",
-    siteName: "Terso",
-    title: "Terso | Ensuring Process in Every Step",
+    siteName: companyName,
+    title: `${companyName} | Ensuring Process in Every Step`,
     description:
       "Affordable hygiene products built for Nigeria with safe production practices and industrial standard procedures.",
     images: [
@@ -40,13 +41,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Terso - Ensuring process in every step",
+        alt: `${companyName} - Ensuring process in every step`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terso | Ensuring Process in Every Step",
+    title: `${companyName} | Ensuring Process in Every Step`,
     description:
       "Affordable hygiene products built for Nigeria with safe production practices and industrial standard procedures.",
     images: ["/opengraph-image"],

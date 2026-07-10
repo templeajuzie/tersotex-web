@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { contact } from "@/lib/contact"
 import {
   MobileNav,
   MobileNavHeader,
@@ -29,10 +30,10 @@ export function ProductPageHeader() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton href="tel:08145210122" variant="secondary">
+          <NavbarButton href={contact.phoneHref} variant="secondary">
             Call
           </NavbarButton>
-          <NavbarButton href="https://wa.me/2348145210122" variant="primary">
+          <NavbarButton href={contact.whatsappUrl} variant="primary">
             WhatsApp
           </NavbarButton>
         </div>
@@ -63,14 +64,14 @@ export function ProductPageHeader() {
           ))}
           <div className="flex w-full flex-col gap-4">
             <NavbarButton
-              href="tel:08145210122"
+              href={contact.phoneHref}
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full text-white"
             >
               Call
             </NavbarButton>
             <NavbarButton
-              href="https://wa.me/2348145210122"
+              href={contact.whatsappUrl}
               onClick={() => setIsMobileMenuOpen(false)}
               variant="primary"
               className="w-full"
