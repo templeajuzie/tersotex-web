@@ -80,3 +80,5 @@ export function getProduct(slug: string) {
 export function getProductSlugs() {
   return [...new Set(products.map((product) => product.slug))]
 }
+
+//update
