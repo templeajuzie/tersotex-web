@@ -73,7 +73,7 @@ export function HeroSection() {
 
       {/* Content overlay - text on the left */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32 w-full">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl">
           {/* Text content */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
