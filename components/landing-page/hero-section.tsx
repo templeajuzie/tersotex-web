@@ -89,7 +89,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1] text-background text-balance mb-8"
           >
-            <AnimatedText text="Ensuring process" delay={0.2} />
+            <AnimatedText text="Ensuring standard process" delay={0.2} />
             <br />
             <span className="text-accent">
               <AnimatedText text="in every step" delay={0.6} />
